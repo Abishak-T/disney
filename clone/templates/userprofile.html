@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" data-bs-theme="dark">
+<head>
+    <title>Disney+</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+
+    <style>
+
+        body{
+            background-image: linear-gradient(180deg, #0a172f, #0f1014,#0f1014);
+            height: 738px;
+            backdrop-filter: blur(1px);
+
+            
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 100px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 171px;
+            }
+
+        .navs {
+            padding: 35px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            margin-left: 18px;
+            }
+
+        .navs:hover {
+            color: #f1f1f1;
+            }
+
+
+         @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .navs {font-size: 22px;}
+            }
+
+            #subtn{
+                border-radius: 16px;
+                font-size: small;
+                width: 91px;
+                height: 30px;
+                margin-left: 5px;
+                color: #f4c471;
+                background-color:  #27231e;
+                border: none;
+            }
+
+            #userpagesubbtn{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border: none;
+            background-image: linear-gradient(to right, #0c57e2, #061f6b);
+            color: white;
+            font-size: larger;
+            font-weight: 600;
+            width: 30%;
+            height: 45px;
+            border-radius: 9px;
+            margin-top: 86px;
+            margin-left: 48px;
+            }
+            #userpagesubbtn:hover{
+                transform: scale(1.02);
+                transition: 0.2s;
+            }
+
+            #user1:hover{
+                transform: scale(1.07);
+                transition: 0.1s;
+                cursor: pointer;
+            }
+
+
+            #kids:hover{
+                transform: scale(1.07 );
+                transition: 0.1s;
+                cursor: pointer;
+            }
+
+            #userpageaddbtn:hover{
+                transform: scale(1.07 );
+                transition: 0.1s;
+                cursor: pointer;
+            }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-1">
+            <div class="sidebar">
+              <div style="margin-top: -125px;">
+              <img src="{% static 'images/disneylogo1.png' %}" alt="no" style="width: 70px; margin-left: 15px; "> <br><br>
+              <!-- <button id="subtn" ><a href="{% url 'subscrip' %}" style="text-decoration: none;color: #f4c471;">Subscribe <i class="fa-solid fa-chevron-right"></i></a></button> -->
+          </div>
+      
+              <a class="navs" style="margin-top: 85px;" href="#home"><i class="fa fa-fw fa-home"></i></a>
+              <a class="navs" href="#search"><i class="fa fa-fw fa-search"></i></a>
+              <a class="navs"  href="{% url 'user' %}"><i class="fa-regular fa-circle-user"></i></a>
+              <!-- <a class="navs"  href="#contact"><i class="fa fa-fw fa-envelope"></i></a> -->
+            </div>
+          </div>   <!--for col-1-->
+
+
+
+        <div class="col-11">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <h4 style="margin-top: 42px;">Subscribe to  enjoy Disney+ Hotstar&nbsp; <i class="fa-solid fa-chevron-right fa-xs"></i></h4>
+                </div>
+                <div class="col-6">
+                    <a href="{% url 'subscrip' %}"><button type="submit" id="userpagesubbtn">Subscribe</button></a><span style="color: #505668;margin-left: 10px;">Plans start at ₹ 299/-</span><br> <br>   
+                </div>
+            </div>
+            <hr style="width: 87%; margin-left: 95px;margin-top: 22px;">
+
+            <h3 style="margin-top: 28px;">Profiles</h3>
+            <div>
+                <br><br>
+                <img id="user1" src="../static/images/userimage.png" alt="" style="width: 110px;"> 
+                <img id="kids" src="../static/images/kids.png" alt="" style="width: 110px; margin-left: 30px;">   
+                <a href="{% url 'signup' %}"><button id="userpageaddbtn" style="width: 110px; height: 110px; position: absolute; margin-left: 30px; border-radius: 55px; border: none;font-size: xx-large; background-color: #3e4045;"><i class="fa-solid fa-plus" style="color: #ffffff;"></i></button></a>
+
+            </div>
+
+            <!-- footer    -->
+
+        <div class="container-fluid" style="background-color: #0f1014; margin-left: -13px; padding-left: 42px; margin-top: 80px;">
+            <div class="row">
+            <div class="col-3 mt-5">
+                <h6>Company</h6><br>
+                <a href="" style="text-decoration: none;"><h6 style="color: #737f9c;">About Us</h6></a>
+                <a href="" style="text-decoration: none;"><h6 style="color: #737f9c;">Careers</h6></a> <br>
+                <p style="color: #737f9c; font-weight: 500;">&copy; 2024 STAR. All Rights Reserved. <br> <a href="" style="text-decoration: none;color: #737f9c;">Terms Of Use</a> &nbsp; <a href="" style="text-decoration: none;color: #737f9c;">Privacy</a>  &nbsp; <a href="" style="text-decoration: none;color: #737f9c;">FAQ</a>  </p>
+            </div>
+            <div class="col-3 mt-5">
+                <h6>View Website in</h6><br>
+                <h6 style="color: #737f9c;">&#10003; English</h6>
+            </div>
+            <div class="col-3 mt-5">
+                <h6>Need help ?</h6><br>
+                <a href="" style="text-decoration: none;"><h6 style="color: #737f9c;">Visit Help Center</h6></a>
+                <a href="" style="text-decoration: none;"><h6 style="color: #737f9c;">Share Feedback</h6></a>
+            </div>
+            <div class="col-3 mt-5">
+                <h6 style="margin-left: 45px;">Connect with Us</h6><br>
+            <a href="https://www.facebook.com/DisneyPlus"><img src="../static/images/facebook (1).png" alt="no" height="25px" width="25px" style="margin-left: 46px;"></a>
+            <a href="https://x.com/DisneyPlus?t=FK7SJMJr8Q6pjcgrGLOF5Q&s=09"><img src="../static/images/x-twitter-brands-solid (1).svg" alt="no" height="25px" width="25px" style="margin-left: 10px;"><br></a>
+            <a href="https://play.google.com/store/apps/details?id=in.startv.hotstar"><img src="../static/images/googleplay.png" alt="" style="width: 130px;"></a>
+            <a href=""><img src="../static/images/appstore.png" alt="" style="width: 130px;"></a>
+            </div>
+
+        </div>
+    </div> 
+
+
+
+        </div>    <!--for col-11-->
+
+
+
+    
+</div>  <!--for row-->
+</div>  <!--for container fluid 1-->
+
+</body>

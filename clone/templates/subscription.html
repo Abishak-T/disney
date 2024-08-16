@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}">
+    <style>
+        #bggrad{
+            background-image: linear-gradient(to right, black,#040a16,#081638);
+           
+        }
+        #starttrialbtn{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border: none;
+            background-image: linear-gradient(to right, #0c57e2, #061f6b);
+            color:white;
+            width: 90%;
+            height: 32px;
+            
+
+            
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(#081638,#081638);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3" id="bggrad">
+                <img src="{% static 'images/disneylogo1.png' %}" alt="" style="width: 157px; height: 101px; margin-top: 100px; margin-left: 20px;">
+                <h3 style="color: white; position: absolute; z-index: 1;">The best stories in <br>the world,all in one place.</h3><br><br>
+                <div id="subs">
+                <img src="{% static 'images/disneylogo1.png' %}" alt="" style="width: 112px; height: 65px; margin-top: 100px; margin-left: -6px;"><br><br>
+                <h2 style="color: white; font-family: serif;">$<span style="font-family: Garamond">6.99</span><span style="font-size: medium; color: rgb(148 140 140 / 85%);">/mo.</span></h2> 
+                <p style="color: rgba(255, 255, 255, 0.918);">Start streaming Disney+ with your 7 day <br>free trial.</p>
+                <button id="starttrialbtn" >START FREE TRIAL</button>
+                </div>
+
+            </div>
+            <div class="col-9" style="border: none;">
+                <img src="{% static 'images/subslist.jpg' %}" alt="no" style="width: 101%; height: 648px; border: none;position:sticky">
+                 <h2 style="color: white; font-family: serif; z-index: 1;">$<span style="font-family: Garamond;">6.99</span><span style="font-size: medium; color: rgb(148 140 140 / 85%);">/mo.</span></h2> 
+
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="{% static 'images/mainlogo.png' %}">
+    <style>
+        #bggrad{
+            background-image: linear-gradient(to right, black,#040a16,#081638);
+            min-height: 690px;
+        }
+        #starttrialbtn{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border: none;
+            background-image: linear-gradient(to right, #0c57e2, #061f6b);
+            color:white;
+            width: 90%;
+            height: 32px;
+            border-radius: 4px;
+        }
+        #buynowbtn{
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border: none;
+            background-image: linear-gradient(to right, #0c57e2, #061f6b);
+            color:white;
+            width: 90%;
+            height: 32px;
+            border-radius: 4px;
+
+        }
+        .subs-content {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            color: white;
+            margin-top: 230px;
+            margin-left: 10px;
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+        .image-container img {
+            width: 101%;
+            height: 738px;
+            
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(#081638,#081638);">
+    <div class="container-fluid" style="height:100%;">
+        <div class="row">
+            <div class="col-3" id="bggrad">
+                <button style="position: absolute; margin-top: 12px; border: none; background-color: black; "><a href="{% url 'home' %}"><i class="fa fa-arrow-circle-left" style="color: white;font-size: x-large; font-weight: 600;"></i></a></button>
+                <img src="{% static 'images/disneylogo1.png' %}" alt="" style="width: 157px; height: 101px; margin-top: 100px; margin-left: -5px;">
+                <h3 style="color: white; position: absolute; z-index: 1;">The best stories in <br>the world, all in one place.</h3><br><br>
+                <div style="margin-top: 24px;">
+                    <img src="{% static 'images/disneylogo1.png' %}" alt="" style="width: 112px; height: 65px; margin-top: 100px; margin-left: -6px;"><br><br>
+                    <h2 style="color: white; font-family: serif;">$<span style="font-family: Garamond">1.99</span><span style="font-size: medium; color: rgb(148 140 140 / 85%);">/mo.</span></h2> 
+                    <p style="color: rgba(255, 255, 255, 0.918);">Start streaming Disney+ with your 7 day <br>free trial.</p>
+                    <button id="starttrialbtn">START FREE TRIAL</button>
+                </div>
+            </div>
+            <div class="col-9" style="border: none; position: relative;">
+                <div class="subs-content">
+                    <img src="{% static 'images/disneylogo1.png' %}" alt="" style="width: 112px; height: 65px; margin-top: 100px; margin-left: -6px;"><br><br>
+                    <h2 style="color: white; font-family: serif;">$<span style="font-family: Garamond">12.99</span><span style="font-size: medium; color: rgb(148 140 140 / 85%);">/mo.</span></h2> 
+                    <p style="color: rgba(255, 255, 255, 0.918);">Get Disney+ along with Hulu and  <br>ESPN+ for the best movies, shows, and sports.</p>
+                    <button id="buynowbtn">BUY NOW</button>
+                </div>
+                <div class="image-container">
+                    <img src="{% static 'images/subslist.jpg' %}" alt="no">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
